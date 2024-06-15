@@ -20,8 +20,10 @@ public class DemoController {
     public ResponseEntity<HttpStatus> saveEmployee(@RequestBody Employee employee){
 
         if(employee!=null){
+            System.out.println("valid employee object");
             return new ResponseEntity<>(HttpStatus.CREATED);
         }else{
+            System.out.println("In valid employee object");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
